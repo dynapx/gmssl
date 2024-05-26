@@ -92,6 +92,7 @@ def sm3_hash(msg):
     # print(msg)
     len1 = len(msg)
     reserve1 = len1 % 64
+    msg=bytes_to_list(msg)
     msg.append(0x80)
     reserve1 = reserve1 + 1
     # 56-64, add 64 byte
